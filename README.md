@@ -7,8 +7,8 @@ Easy Docker Study Documentation.
 - [1.2 Install docker-compose on ubuntu using apt](#install-ubuntu-dc)
 - [1.3 Install docker official link](https://docs.docker.com/engine/install/)
 - [1.4 Install docker-compose official link](https://docs.docker.com/compose/install/)
-- [1.5 After installation check version](#install-version)
-- [1.6 After docker-compose installation check version](#dc-install-version)
+- [1.5 After installation check docker version](#install-version)
+- [1.6 After installation check docker-compose version](#dc-install-version)
 
 
 ----------
@@ -27,14 +27,15 @@ Installing docker-ompose from the official ubuntu repository.
 root@machine: ~/ # apt install docker-compose
 ```
 
-#### <a name='install-version'>After installation check version</a>
-If the docker installation is successfull. run the command to check the version
+#### <a name='install-version'>After installation check docker version</a>
+If the docker installation is successfull. Run the command to check the version
 ```bash
 root@machine: ~/ # docker -v
 Docker version 19.03.6, build 369ce74a3c
 ```
 
-#### <a name='dc-install-version'>After docker-compose installation check version</a>
+#### <a name='dc-install-version'>After installation check docker-compose version</a>
+If the docker-compose installation is successfull. Run the command to check the version
 ```bash
 root@machine: ~/ # docker-compose -v
 docker-compose version 1.17.1, build unknown
