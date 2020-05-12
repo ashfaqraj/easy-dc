@@ -34,7 +34,7 @@ root@machine: ~/ # docker -v
 Docker version 19.03.6, build 369ce74a3c
 ```
 
-### <a name='dc-install-version'>After docker-compose installation check version</a>
+#### <a name='dc-install-version'>After docker-compose installation check version</a>
 ```bash
 root@machine: ~/ # docker-compose -v
 docker-compose version 1.17.1, build unknown
