@@ -18,6 +18,26 @@ Easy Docker Study Documentation.
   * [git prompt - git branch status in PS1](#PS1-git)
   * [Misc](#misc)
 
+* Study Links & References
+  * github links
+    * [Complete docker library](https://github.com/veggiemonk/awesome-docker)
+    * [Minimize docker container - skinnywhale](https://github.com/djosephsen/skinnywhale)
+    * [All desktop application docker files](https://github.com/jessfraz/dockerfiles)
+    * [docker ssh](https://github.com/jeroenpeeters/docker-ssh)
+    * [docker tiny core dockerfile](https://github.com/tatsushid/docker-tinycore/blob/master/7.2/x86/Dockerfile)
+    * [docker for beginners - installation](https://github.com/groda/big_data/blob/master/docker_for_beginners.md)    
+    * [github writing - help doc](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#headings)
+    
+  * Linux/Unix Links
+    * [alpine stable releases](http://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/)
+  
+  * docker hub links
+    * [tinycore](https://hub.docker.com/r/tatsushid/tinycore/)
+    
+  * Misc Links & Blogs
+    * [text based gmail from docker](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/)
+
+
 <br></br><br></br><br></br><br></br>
 
 ### <a name='installation'>Installation</a>
