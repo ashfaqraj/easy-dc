@@ -20,7 +20,7 @@ Easy Docker Study Documentation.
 
 * Study Links & References
   * github links
-    * [Complete docker library](https://github.com/veggiemonk/awesome-docker)
+    * [Complete docker library - Awesome Docker](https://github.com/veggiemonk/awesome-docker)
     * [Minimize docker container - skinnywhale](https://github.com/djosephsen/skinnywhale)
     * [All desktop application docker files](https://github.com/jessfraz/dockerfiles)
     * [docker ssh](https://github.com/jeroenpeeters/docker-ssh)
