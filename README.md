@@ -52,18 +52,17 @@ docker-compose version 1.17.1, build unknown
 
 <a name='dc'>
   alias dc='docker-compose'
-</a>
+</a></p>
 
 <a name='names'>
   alias names='docker ps --format "table {{.ID}}\\t{{.Names}}\\t{{.Image}}\\t{{.RunningFor}} ago\\t{{.Status}}\\t{{.Command}}"'
-</a>
+</a></p>
 
 <a name='rmi'>
   alias rmi='dc stop; docker rm -f $(docker ps -a -q); docker rmi $(docker images -q -a); docker volume rm $(docker volume ls -f dangling=true -q);'
-</a>
+</a></p>
 
 <a name='misc'>
   alias s='source ~/.bashrc'
-</a>
-
+</a></p>
 
