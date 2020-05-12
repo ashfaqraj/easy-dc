@@ -14,9 +14,9 @@ Easy Docker Study Documentation.
   * [dc - for docker-compose](#dc)
   * [names - formatted docker ps output for large list of services](#names)
   * [rmi - stop all docker containes. Removes all docker services, images and volumes (including dangling)](#rmi)
-  * [Misc](*misc)
+  * [Misc](#misc)
 
-<p></p><p></p>
+<br></br><br></br><br></br><br></br>
 
 ### <a name='installation'>Installation</a>
 -----
@@ -48,7 +48,7 @@ docker-compose version 1.17.1, build unknown
 
 
 ### <a name='mybashalias'>My Bash Aliases</a>
-:small_blue_diamond: Bash aliases in file ~/.bash_aliases
+Bash aliases in file ~/.bash_aliases
 
 <a name='dc'>
   alias dc='docker-compose'
@@ -64,5 +64,5 @@ docker-compose version 1.17.1, build unknown
 
 <a name='misc'>
   alias s='source ~/.bashrc'
-</a></p>
+</a>
 
