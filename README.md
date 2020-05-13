@@ -14,6 +14,9 @@ Easy Docker Study Documentation.
   * [Install on Windows](#install-jupyter-notebook-windows)
   * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
   
+* [Putty Study Material](#putty-study)
+  * Connect Local Windows VirtualBox VM via Putty](#VB-VM-via-putty-windows)
+
 * [My aliases - bash](#mybashalias)
   * [dc - for docker-compose](#dc)
   * [names - formatted docker ps output for large list of services](#names)
@@ -48,11 +51,11 @@ Easy Docker Study Documentation.
     * [text based gmail from docker](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/)
 
 
-<br></br><br></br><br></br><br></br>
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: docker installation starts here)
 [//]: # (comment: ###########################################################)
+<br></br><br></br><br></br>
 
 ### <a name='installation'>Installation - Docker/Docker-compose</a>
 -----
@@ -81,9 +84,11 @@ root@machine: ~/ # docker-compose -v
 docker-compose version 1.17.1, build unknown
 ```
 
+
 [//]: # (comment: ###########################################################)
 [//]: # (comment: jupyter notebook installation steps starts here)
 [//]: # (comment: ###########################################################)
+<br></br><br></br><br></br>
 
 ### <a name='install-jupyter-notebook'>Install jupyter notebook</a>
 ------
@@ -102,10 +107,34 @@ to get autocomplete
 		jupyter nbextension enable --py jupyter_tabnine
 		jupyter serverextension enable --py jupyter_tabnine
 ```
-  
+
+
+[//]: # (comment: ###########################################################)
+[//]: # (comment: Putty study material start here)
+[//]: # (comment: ###########################################################)
+<br></br><br></br><br></br>
+
+### <a name='putty-study'>Putty Study Material</a>
+------
+
+#### <a name='VB-VM-via-putty-windows'>Connect Local Windows VirtualBox VM via Putty</a>
+Steps:
+* Open Settings --> network settings in virtual box where my connection(adapter 1) showed 'NAT'
+* Clicked the 'port forwarding' option at the bottom of the screen
+* Gave it a name 'PuTTY-port-fwd', protocol TCP, host IP 127.0.1.1 host port 8001 guest IP 10.0.2.15 guest port 22
+  * NOTE: 10.0.2.15 is the IP inside VirtualBox VM
+* Launch PuTTY and set it to root@127.0.1.1 port 8001 and try connect
+  * NOTE: VB VM should be running
+  * NOTE: This will help to connect via ubuntu user
+    * to enable ssh for root user
+    * add line PermitRootLogin yes 
+    * in file /etc/ssh/sshd_config
+
+
 [//]: # (comment: ###########################################################)
 [//]: # (comment: My bash aliases starts here)
 [//]: # (comment: ###########################################################)
+<br></br><br></br><br></br>
 
 ### <a name='mybashalias'>My Bash Aliases</a>
 Bash aliases in file ~/.bash_aliases
@@ -192,6 +221,7 @@ alias s='source ~/.bashrc'
 [//]: # (comment: ###########################################################)
 [//]: # (comment: My windows aliases starts here)
 [//]: # (comment: ###########################################################)
+<br></br><br></br><br></br>
 
 ### <a name='mywindowsalias'>My aliases - windows</a>
 ------
