@@ -15,7 +15,7 @@ Easy Docker Study Documentation.
   * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
   
 * [Putty Study Material](#putty-study)
-  * Connect Local Windows VirtualBox VM via Putty](#VB-VM-via-putty-windows)
+  * [Connect Local Windows VirtualBox VM via Putty](#VB-VM-via-putty-windows)
 
 * [My aliases - bash](#mybashalias)
   * [dc - for docker-compose](#dc)
