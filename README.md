@@ -47,26 +47,23 @@ Easy Docker Study Documentation.
 [//]: # (comment: ###########################################################)
 [//]: # (comment: docker installation starts here)
 [//]: # (comment: ###########################################################)
-### <a name='installation'>Installation - Docker/Docker-compose</a>
-#### <a name='install-ubuntu'>Install docker on Ubuntu using apt</a>
+## <a name='installation'>Installation - Docker/Docker-compose</a>
+### <a name='install-ubuntu'>Install docker on Ubuntu using apt</a>
 ```
 root@machine: ~/ # apt install docker.io
 ```
-
-#### <a name='install-ubuntu-dc'>Install docker-compose on ubuntu using apt</a>
+### <a name='install-ubuntu-dc'>Install docker-compose on ubuntu using apt</a>
 Installing docker-ompose from the official ubuntu repository.
 ```
 root@machine: ~/ # apt install docker-compose
 ```
-
-#### <a name='install-version'>After installation check docker version</a>
+### <a name='install-version'>After installation check docker version</a>
 If the docker installation is successfull. Run the command to check the version
 ```
 root@machine: ~/ # docker -v
 Docker version 19.03.6, build 369ce74a3c
 ```
-
-#### <a name='dc-install-version'>After installation check docker-compose version</a>
+### <a name='dc-install-version'>After installation check docker-compose version</a>
 If the docker-compose installation is successfull. Run the command to check the version
 ```
 root@machine: ~/ # docker-compose -v
@@ -76,14 +73,14 @@ docker-compose version 1.17.1, build unknown
 [//]: # (comment: ###########################################################)
 [//]: # (comment: jupyter notebook installation steps starts here)
 [//]: # (comment: ###########################################################)
-### <a name='install-jupyter-notebook'>Install jupyter notebook</a>
-#### <a name='install-jupyter-notebook-windows'>Install on Windows</a>
+## <a name='install-jupyter-notebook'>Install jupyter notebook</a>
+### <a name='install-jupyter-notebook-windows'>Install on Windows</a>
 ```
 	1. install windows python 3.7.7 installer
 	2. goto cmd and move to python/Scripts folder
 	3. pip.exe install notebook
 ```
-#### <a name='jupyter-notebook-autocomplete'>Autocomplete for jupyter notebook</a>
+### <a name='jupyter-notebook-autocomplete'>Autocomplete for jupyter notebook</a>
 ```
 to get autocomplete
 		pip3 install jupyter-tabnine
@@ -95,8 +92,8 @@ to get autocomplete
 [//]: # (comment: ###########################################################)
 [//]: # (comment: Putty study material start here)
 [//]: # (comment: ###########################################################)
-### <a name='putty-study'>Putty Study Material</a>
-#### <a name='VB-VM-via-putty-windows'>Connect Local Windows VirtualBox VM via Putty</a>
+## <a name='putty-study'>Putty Study Material</a>
+### <a name='VB-VM-via-putty-windows'>Connect Local Windows VirtualBox VM via Putty</a>
 Steps:
 * Open Settings --> network settings in virtual box where my connection(adapter 1) showed 'NAT'
 * Clicked the 'port forwarding' option at the bottom of the screen
@@ -112,26 +109,26 @@ Steps:
 [//]: # (comment: ###########################################################)
 [//]: # (comment: My bash aliases starts here)
 [//]: # (comment: ###########################################################)
-### <a name='mybashalias'>My Bash Aliases</a>
+## <a name='mybashalias'>My Bash Aliases</a>
 Bash aliases in file ~/.bash_aliases
-#### <a name='dc'>dc</a>
+### <a name='dc'>dc</a>
 ```
 alias dc='docker-compose' 
 ```
-#### <a name='names'>names</a>
+### <a name='names'>names</a>
 ```
 alias names='docker ps --format "table {{.ID}}\\t{{.Names}}\\t{{.Image}}\\t{{.RunningFor}} ago\\t{{.Status}}\\t{{.Command}}"'
 ```
-#### <a name='rmi'>rmi</a>
+### <a name='rmi'>rmi</a>
 ```
 alias rmi='dc stop; docker rm -f $(docker ps -a -q); docker rmi $(docker images -q -a); docker volume rm $(docker volume ls -f dangling=true -q);'
 ```
-#### <a name='PS1'>PS1 - colored PS1 for root user in ~/.bashrc</a>
+### <a name='PS1'>PS1 - colored PS1 for root user in ~/.bashrc</a>
 ```
 export PS1="\[\033[01;31m\]\u@\h\[\e[m\]:\[\033[01;34m\]\w \[\033[36m\]\`parse_git_branch\`\[\e[m\]# "
 ```
-#### <a name='PS1-git'>git prompt</a>
-```
+### <a name='PS1-git'>git prompt</a>
+```bash
 # get current branch in git repo
 function parse_git_branch() {
         BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -182,7 +179,7 @@ function parse_git_dirty {
 #export PS1="\[\e[31m\]\u\[\e[m\]\[\e[31m\]@\[\e[m\]\[\e[31m\]\h\[\e[m\]:\[\e[34m\]\w\[\e[m\] \[\e[36m\]\`parse_git_branch\`\[\e[m\]# "
 export PS1="\[\033[01;31m\]\u@\h\[\e[m\]:\[\033[01;34m\]\w \[\033[36m\]\`parse_git_branch\`\[\e[m\]# "
 ```
-#### <a name='misc'>misc</a>
+### <a name='misc'>misc</a>
 ```
 alias s='source ~/.bashrc'
 ```
@@ -190,8 +187,8 @@ alias s='source ~/.bashrc'
 [//]: # (comment: ###########################################################)
 [//]: # (comment: My windows aliases starts here)
 [//]: # (comment: ###########################################################)
-### <a name='mywindowsalias'>My aliases - windows</a>
-#### <a name='create-windows-alias'>Create/Setup windows aliases</a>
+## <a name='mywindowsalias'>My aliases - windows</a>
+### <a name='create-windows-alias'>Create/Setup windows aliases</a>
 Steps to create aliases files
 ```
 1. create file aliases.bat to any windows folder, say C:\Users\admin\Desktop\aliases.bat
@@ -199,7 +196,7 @@ Steps to create aliases files
 3. Start/Restart CMD prompt
 4. # aliases.bat     or     # aliases
 ```
-#### <a name='my-windows-aliases'>Few useful windows aliases</a>
+### <a name='my-windows-aliases'>Few useful windows aliases</a>
 ```
 @echo off
 
@@ -211,12 +208,12 @@ doskey desk=cd C:\Users\admin.DDSPL1491\Desktop
 [//]: # (comment: ###########################################################)
 [//]: # (comment: sublime study starts here)
 [//]: # (comment: ###########################################################)
-### <a name='sublime-study'>Sublime Study</a>
-#### <a name='sublime-package-install'>Sublime packages Install</a>
+## <a name='sublime-study'>Sublime Study</a>
+### <a name='sublime-package-install'>Sublime packages Install</a>
 ```
 goto Tools --> click Install Package Control
 ```
-#### <a name='sublime-shortcuts-windows'>Sublime shortcuts - windows</a>
+### <a name='sublime-shortcuts-windows'>Sublime shortcuts - windows</a>
 | shortcut | Description	|
 | ------------- | ------------------------------	|
 | `Ctrl+Shift+P`      | package install manager	|
