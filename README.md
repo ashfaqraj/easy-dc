@@ -29,7 +29,10 @@ Easy Docker Study Documentation.
   * [Create/Setup windows aliases](#create-windows-alias)
   * [Few useful windows aliases](#my-windows-aliases)
   
-* [Sublime Settings](https://github.com/ashfaqraj/easy-dc/blob/master/sublime-settings)
+* [Sublime Study](#sublime-study)
+  * [Sublime Settings file - user settings](https://github.com/ashfaqraj/easy-dc/blob/master/sublime-settings)
+  * [Sublime packages Install](#sublime-package-install)
+  * [Sublime shortcuts - windows](#sublime-shortcuts-windows)
 
 * Study Links & References
   * github links
@@ -242,4 +245,23 @@ doskey ls=dir
 doskey desk=cd C:\Users\admin.DDSPL1491\Desktop
 
 ```
+
+
+[//]: # (comment: ###########################################################)
+[//]: # (comment: sublime study starts here)
+[//]: # (comment: ###########################################################)
+<br></br><br></br><br></br>
+
+### <a name='sublime-study'>Sublime Study</a>
+------
+
+#### <a name='sublime-package-install'>Sublime packages Install</a>
+```bash
+goto Tools --> click Install Package Control
+```
+
+#### <a name='sublime-shortcuts-windows'>Sublime shortcuts - windows</a>
+* package install manager - Ctrl + Shift + P
+* search file in repo - Ctrl + p
+* search in file - Ctrl + f
 
