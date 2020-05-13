@@ -261,7 +261,10 @@ goto Tools --> click Install Package Control
 ```
 
 #### <a name='sublime-shortcuts-windows'>Sublime shortcuts - windows</a>
-* package install manager - Ctrl + Shift + P
-* search file in repo - Ctrl + p
-* search in file - Ctrl + f
+| shortcut | Description	|
+| ------------- | ------------------------------	|
+| `Ctrl+Shift+P`      | package install manager	|
+| `Ctrl + p`   | **search file in repo**	|
+| `Ctrl + f` | search in file	|
+
 
