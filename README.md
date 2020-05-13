@@ -9,14 +9,11 @@ Easy Docker Study Documentation.
   * [Install docker-compose official link](https://docs.docker.com/compose/install/)
   * [After installation check docker version](#install-version)
   * [After installation check docker-compose version](#dc-install-version)
-
 * [Install jupyter notebook](#install-jupyter-notebook)
   * [Install on Windows](#install-jupyter-notebook-windows)
   * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
-  
 * [Putty Study Material](#putty-study)
   * [Connect Local Windows VirtualBox VM via Putty](#VB-VM-via-putty-windows)
-
 * [My aliases - bash](#mybashalias)
   * [dc - for docker-compose](#dc)
   * [names - formatted docker ps output for large list of services](#names)
@@ -24,16 +21,13 @@ Easy Docker Study Documentation.
   * [PS1 - colored PS1 for root user in ~/.bashrc](#PS1)
   * [git prompt - git branch status in PS1](#PS1-git)
   * [Misc](#misc)
-  
 * [My aliases - windows](#mywindowsalias)
   * [Create/Setup windows aliases](#create-windows-alias)
   * [Few useful windows aliases](#my-windows-aliases)
-  
 * [Sublime Study](#sublime-study)
   * [Sublime Settings file - user settings](https://github.com/ashfaqraj/easy-dc/blob/master/sublime-settings)
   * [Sublime packages Install](#sublime-package-install)
   * [Sublime shortcuts - windows](#sublime-shortcuts-windows)
-
 * Study Links & References
   * github links
     * [Complete docker library - Awesome Docker](https://github.com/veggiemonk/awesome-docker)
@@ -43,67 +37,54 @@ Easy Docker Study Documentation.
     * [docker tiny core dockerfile](https://github.com/tatsushid/docker-tinycore/blob/master/7.2/x86/Dockerfile)
     * [docker for beginners - installation](https://github.com/groda/big_data/blob/master/docker_for_beginners.md)    
     * [github writing - help doc](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#headings)
-    
   * Linux/Unix Links
     * [alpine stable releases](http://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/)
-  
   * docker hub links
     * [tinycore](https://hub.docker.com/r/tatsushid/tinycore/)
-    
   * Misc Links & Blogs
     * [text based gmail from docker](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/)
-
-
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: docker installation starts here)
 [//]: # (comment: ###########################################################)
-<br></br><br></br><br></br>
-
 ### <a name='installation'>Installation - Docker/Docker-compose</a>
------
 #### <a name='install-ubuntu'>Install docker on Ubuntu using apt</a>
-```bash
+```
 root@machine: ~/ # apt install docker.io
 ```
 
 #### <a name='install-ubuntu-dc'>Install docker-compose on ubuntu using apt</a>
 Installing docker-ompose from the official ubuntu repository.
-```bash
+```
 root@machine: ~/ # apt install docker-compose
 ```
 
 #### <a name='install-version'>After installation check docker version</a>
 If the docker installation is successfull. Run the command to check the version
-```bash
+```
 root@machine: ~/ # docker -v
 Docker version 19.03.6, build 369ce74a3c
 ```
 
 #### <a name='dc-install-version'>After installation check docker-compose version</a>
 If the docker-compose installation is successfull. Run the command to check the version
-```bash
+```
 root@machine: ~/ # docker-compose -v
 docker-compose version 1.17.1, build unknown
 ```
 
-
 [//]: # (comment: ###########################################################)
 [//]: # (comment: jupyter notebook installation steps starts here)
 [//]: # (comment: ###########################################################)
-<br></br><br></br><br></br>
-
 ### <a name='install-jupyter-notebook'>Install jupyter notebook</a>
-------
 #### <a name='install-jupyter-notebook-windows'>Install on Windows</a>
-```bash
+```
 	1. install windows python 3.7.7 installer
 	2. goto cmd and move to python/Scripts folder
 	3. pip.exe install notebook
 ```
-
 #### <a name='jupyter-notebook-autocomplete'>Autocomplete for jupyter notebook</a>
-```bash
+```
 to get autocomplete
 		pip3 install jupyter-tabnine
 		jupyter nbextension install --py jupyter_tabnine
@@ -111,15 +92,10 @@ to get autocomplete
 		jupyter serverextension enable --py jupyter_tabnine
 ```
 
-
 [//]: # (comment: ###########################################################)
 [//]: # (comment: Putty study material start here)
 [//]: # (comment: ###########################################################)
-<br></br><br></br><br></br>
-
 ### <a name='putty-study'>Putty Study Material</a>
-------
-
 #### <a name='VB-VM-via-putty-windows'>Connect Local Windows VirtualBox VM via Putty</a>
 Steps:
 * Open Settings --> network settings in virtual box where my connection(adapter 1) showed 'NAT'
@@ -133,37 +109,29 @@ Steps:
     * add line PermitRootLogin yes 
     * in file /etc/ssh/sshd_config
 
-
 [//]: # (comment: ###########################################################)
 [//]: # (comment: My bash aliases starts here)
 [//]: # (comment: ###########################################################)
-<br></br><br></br><br></br>
-
 ### <a name='mybashalias'>My Bash Aliases</a>
 Bash aliases in file ~/.bash_aliases
-
 #### <a name='dc'>dc</a>
-```bash
+```
 alias dc='docker-compose' 
 ```
-
 #### <a name='names'>names</a>
-```bash
+```
 alias names='docker ps --format "table {{.ID}}\\t{{.Names}}\\t{{.Image}}\\t{{.RunningFor}} ago\\t{{.Status}}\\t{{.Command}}"'
 ```
-
 #### <a name='rmi'>rmi</a>
-```bash
+```
 alias rmi='dc stop; docker rm -f $(docker ps -a -q); docker rmi $(docker images -q -a); docker volume rm $(docker volume ls -f dangling=true -q);'
 ```
-
 #### <a name='PS1'>PS1 - colored PS1 for root user in ~/.bashrc</a>
-```bash
+```
 export PS1="\[\033[01;31m\]\u@\h\[\e[m\]:\[\033[01;34m\]\w \[\033[36m\]\`parse_git_branch\`\[\e[m\]# "
 ```
-
 #### <a name='PS1-git'>git prompt</a>
-```bash
+```
 # get current branch in git repo
 function parse_git_branch() {
         BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -214,31 +182,25 @@ function parse_git_dirty {
 #export PS1="\[\e[31m\]\u\[\e[m\]\[\e[31m\]@\[\e[m\]\[\e[31m\]\h\[\e[m\]:\[\e[34m\]\w\[\e[m\] \[\e[36m\]\`parse_git_branch\`\[\e[m\]# "
 export PS1="\[\033[01;31m\]\u@\h\[\e[m\]:\[\033[01;34m\]\w \[\033[36m\]\`parse_git_branch\`\[\e[m\]# "
 ```
-
 #### <a name='misc'>misc</a>
-```bash
+```
 alias s='source ~/.bashrc'
 ```
-
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: My windows aliases starts here)
 [//]: # (comment: ###########################################################)
-<br></br><br></br><br></br>
-
 ### <a name='mywindowsalias'>My aliases - windows</a>
-------
 #### <a name='create-windows-alias'>Create/Setup windows aliases</a>
 Steps to create aliases files
-```bash
+```
 1. create file aliases.bat to any windows folder, say C:\Users\admin\Desktop\aliases.bat
 2. Add file path C:\Users\admin\Desktop\aliases.bat to PATH environment variable.
 3. Start/Restart CMD prompt
 4. # aliases.bat     or     # aliases
 ```
-
 #### <a name='my-windows-aliases'>Few useful windows aliases</a>
-```bash
+```
 @echo off
 
 doskey ls=dir
@@ -246,25 +208,17 @@ doskey desk=cd C:\Users\admin.DDSPL1491\Desktop
 
 ```
 
-
 [//]: # (comment: ###########################################################)
 [//]: # (comment: sublime study starts here)
 [//]: # (comment: ###########################################################)
-<br></br><br></br><br></br>
-
 ### <a name='sublime-study'>Sublime Study</a>
-------
-
 #### <a name='sublime-package-install'>Sublime packages Install</a>
-```bash
+```
 goto Tools --> click Install Package Control
 ```
-
 #### <a name='sublime-shortcuts-windows'>Sublime shortcuts - windows</a>
 | shortcut | Description	|
 | ------------- | ------------------------------	|
 | `Ctrl+Shift+P`      | package install manager	|
 | `Ctrl + p`   | **search file in repo**	|
 | `Ctrl + f` | search in file	|
-
-
