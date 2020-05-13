@@ -25,6 +25,8 @@ Easy Docker Study Documentation.
 * [My aliases - windows](#mywindowsalias)
   * [Create/Setup windows aliases](#create-windows-alias)
   * [Few useful windows aliases](#my-windows-aliases)
+  
+* [Sublime Settings](https://github.com/ashfaqraj/easy-dc/blob/master/sublime-settings)
 
 * Study Links & References
   * github links
@@ -210,3 +212,4 @@ doskey ls=dir
 doskey desk=cd C:\Users\admin.DDSPL1491\Desktop
 
 ```
+
