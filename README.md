@@ -14,13 +14,17 @@ Easy Docker Study Documentation.
   * [Install on Windows](#install-jupyter-notebook-windows)
   * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
   
-* [My aliases](#mybashalias)
+* [My aliases - bash](#mybashalias)
   * [dc - for docker-compose](#dc)
   * [names - formatted docker ps output for large list of services](#names)
   * [rmi - stop all docker containes. Removes all docker services, images and volumes (including dangling)](#rmi)
   * [PS1 - colored PS1 for root user in ~/.bashrc](#PS1)
   * [git prompt - git branch status in PS1](#PS1-git)
   * [Misc](#misc)
+  
+* [My aliases - windows](#mywindowsalias)
+  * [Create/Setup windows aliases](#create-windows-alias)
+  * [Few useful windows aliases](#my-windows-aliases)
 
 * Study Links & References
   * github links
@@ -98,7 +102,7 @@ to get autocomplete
 ```
   
 [//]: # (comment: ###########################################################)
-[//]: # (comment: My aliases starts here)
+[//]: # (comment: My bash aliases starts here)
 [//]: # (comment: ###########################################################)
 
 ### <a name='mybashalias'>My Bash Aliases</a>
@@ -182,3 +186,27 @@ export PS1="\[\033[01;31m\]\u@\h\[\e[m\]:\[\033[01;34m\]\w \[\033[36m\]\`parse_g
 alias s='source ~/.bashrc'
 ```
 
+
+[//]: # (comment: ###########################################################)
+[//]: # (comment: My windows aliases starts here)
+[//]: # (comment: ###########################################################)
+
+### <a name='mywindowsalias'>My aliases - windows</a>
+------
+#### <a name='create-windows-alias'>Create/Setup windows aliases</a>
+Steps to create aliases files
+```bash
+1. create file aliases.bat to any windows folder, say C:\Users\admin\Desktop\aliases.bat
+2. Add file path C:\Users\admin\Desktop\aliases.bat to PATH environment variable.
+3. Start/Restart CMD prompt
+4. # aliases.bat     or     # aliases
+```
+
+#### <a name='my-windows-aliases'>Few useful windows aliases</a>
+```bash
+@echo off
+
+doskey ls=dir
+doskey desk=cd C:\Users\admin.DDSPL1491\Desktop
+
+```
