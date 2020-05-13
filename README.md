@@ -2,14 +2,18 @@
 Easy Docker Study Documentation.
 
 ## Table of Content
-* [Installation](#installation)
-  * [1.1 Install docker on ubuntu using apt](#install-ubuntu)
-  * [1.2 Install docker-compose on ubuntu using apt](#install-ubuntu-dc)
-  * [1.3 Install docker official link](https://docs.docker.com/engine/install/)
-  * [1.4 Install docker-compose official link](https://docs.docker.com/compose/install/)
-  * [1.5 After installation check docker version](#install-version)
-  * [1.6 After installation check docker-compose version](#dc-install-version)
+* [Installation - Docker/Docker-compose](#installation)
+  * [Install docker on ubuntu using apt](#install-ubuntu)
+  * [Install docker-compose on ubuntu using apt](#install-ubuntu-dc)
+  * [Install docker official link](https://docs.docker.com/engine/install/)
+  * [Install docker-compose official link](https://docs.docker.com/compose/install/)
+  * [After installation check docker version](#install-version)
+  * [After installation check docker-compose version](#dc-install-version)
 
+* [Install jupyter notebook](#install-jupyter-notebook)
+  * [Install on Windows](#install-jupyter-notebook-windows)
+  * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
+  
 * [My aliases](#mybashalias)
   * [dc - for docker-compose](#dc)
   * [names - formatted docker ps output for large list of services](#names)
@@ -40,7 +44,11 @@ Easy Docker Study Documentation.
 
 <br></br><br></br><br></br><br></br>
 
-### <a name='installation'>Installation</a>
+[//]: # (comment: ###########################################################)
+[//]: # (comment: docker installation starts here)
+[//]: # (comment: ###########################################################)
+
+### <a name='installation'>Installation - Docker/Docker-compose</a>
 -----
 #### <a name='install-ubuntu'>Install docker on Ubuntu using apt</a>
 ```bash
@@ -67,7 +75,31 @@ root@machine: ~/ # docker-compose -v
 docker-compose version 1.17.1, build unknown
 ```
 
+[//]: # (comment: ###########################################################)
+[//]: # (comment: jupyter notebook installation steps starts here)
+[//]: # (comment: ###########################################################)
 
+### <a name='install-jupyter-notebook'>Install jupyter notebook</a>
+------
+#### <a name='install-jupyter-notebook-windows'>Install on Windows</a>
+```bash
+	1. install windows python 3.7.7 installer
+	2. goto cmd and move to python/Scripts folder
+	3. pip.exe install notebook
+```
+
+#### <a name='jupyter-notebook-autocomplete'>Autocomplete for jupyter notebook</a>
+```bash
+to get autocomplete
+		pip3 install jupyter-tabnine
+		jupyter nbextension install --py jupyter_tabnine
+		jupyter nbextension enable --py jupyter_tabnine
+		jupyter serverextension enable --py jupyter_tabnine
+```
+  
+[//]: # (comment: ###########################################################)
+[//]: # (comment: My aliases starts here)
+[//]: # (comment: ###########################################################)
 
 ### <a name='mybashalias'>My Bash Aliases</a>
 Bash aliases in file ~/.bash_aliases
