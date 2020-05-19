@@ -1,0 +1,41 @@
+#termcapinfo xterm* ti@:te@
+#caption string "%w"
+#hardstatus alwayslastline "This is SCREENRC flying ..."
+
+vbell off
+altscreen on
+displays
+nonblock on
+
+hardstatus on
+#hardstatus alwayslastline "%{+b kr}[ %H ] %{ky} Screen: %1 %-=% %{kb}  %c  %d.%m.%y"
+hardstatus alwayslastline "%?%{wb}%-Lw%?%{yK}%n*%f %t%?(%u)%?%?%{wk}%+Lw%? %{gk}%=%c %{yk}%d%M%Y"
+#hardstatus string
+
+screen -t w1   0
+defscrollback 999999
+
+# Change Escape Combination to Ctrl+f (Ctrl+a is too useful to lose)
+#escape ^Ff
+
+# PREVIOUS WINDOW
+# Ctrl + Alt + Left from gnome-terminal
+#bindkey ^[[1;7C prev
+
+# NEXT WINDOW
+# Ctrl + Alt + Right from gnome-terminal
+#bindkey ^[[1;7D next
+
+# Alt+Left from putty
+bindkey ^[^[OD prev
+# Alt+Right from putty
+bindkey ^[^[OC next
+
+
+bindkey "^[[D" prev # ctrl-left
+bindkey "^[[C" next # ctrl-right
+
+# Ctrl+Alt+Left from putty
+bindkey ^[^[[D prev
+# Ctrl+Alt+Right from putty
+bindkey ^[^[[C next
