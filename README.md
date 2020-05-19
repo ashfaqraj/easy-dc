@@ -46,6 +46,7 @@ Easy Docker Study Documentation.
     * [tinycore](https://hub.docker.com/r/tatsushid/tinycore/)
   * Misc Links & Blogs
     * [text based gmail from docker](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/)
+    * [Docker cmd to docker-compose convertor](https://www.composerize.com/)
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: docker installation starts here)
