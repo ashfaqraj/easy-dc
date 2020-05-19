@@ -15,6 +15,7 @@ Easy Docker Study Documentation.
 * [Linux Study Material](#linux-study)
   * [Enable root login in linux](#enable-root-login)
   * [Enable root login via ssh](#enable-root-login-via-ssh)
+  * [vimdiff shortcuts](#vimdiff-shortcuts)
   * [Resource rc Files]()
     * [screenrc](https://github.com/ashfaqraj/easy-dc/blob/master/screenrc)
     * [vimrc](https://github.com/ashfaqraj/easy-dc/blob/master/vimrc)
@@ -117,7 +118,18 @@ auth required pam_succeed_if.so user !=root quiet_success
 Steps:
 1. apt install ssh
 2. Add line ```PermitRootLogin yes``` in file /etc/ssh/sshd_config
-  
+
+### <a name='vimdiff-shortcuts'>vimdiff shortcuts</a>
+```
+]c :        - next difference
+[c :        - previous difference
+do          - diff obtain
+dp          - diff put
+zo          - open folded text
+zc          - close folded text
+:diffupdate - re-scan the files for differences
+```
+
 [//]: # (comment: ###########################################################)
 [//]: # (comment: Putty study material start here)
 [//]: # (comment: ###########################################################)
