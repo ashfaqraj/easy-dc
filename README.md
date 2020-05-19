@@ -12,6 +12,9 @@ Easy Docker Study Documentation.
 * [Install jupyter notebook](#install-jupyter-notebook)
   * [Install on Windows](#install-jupyter-notebook-windows)
   * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
+* [Linux Study Material](#linux-study)
+  * [Enable root login in linux](#enable-root-login)
+  * [Enable root login via ssh](#enable-root-login-via-ssh)
 * [Putty Study Material](#putty-study)
   * [Connect Local Windows VirtualBox VM via Putty](#VB-VM-via-putty-windows)
 * [My aliases - bash](#mybashalias)
@@ -89,6 +92,28 @@ to get autocomplete
 		jupyter serverextension enable --py jupyter_tabnine
 ```
 
+[//]: # (comment: ###########################################################)
+[//]: # (comment: Linux study material start here)
+[//]: # (comment: ###########################################################)
+## <a name='linux-study'>Linux Study Material</a>
+### <a name='enable-root-login'>Enable root login in linux</a>
+For Ubuntu 20: 
+Step 1. add line in /etc/gdm3/custom.conf
+```
+[security]
+AllowRoot=true
+AllowRemoteRoot=true
+```
+Step 2. Comment below line in file /etc/pam.d/gdm-password
+```
+auth required pam_succeed_if.so user !=root quiet_success
+```
+
+### <a name='enable-root-login-via-ssh'>Enable root login via ssh</a>
+Steps:
+1. apt install ssh
+2. Add line ```PermitRootLogin yes``` in file /etc/ssh/sshd_config
+  
 [//]: # (comment: ###########################################################)
 [//]: # (comment: Putty study material start here)
 [//]: # (comment: ###########################################################)
