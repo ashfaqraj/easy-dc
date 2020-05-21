@@ -15,6 +15,8 @@ Easy Docker Study Documentation.
 * [Linux Study Material](#linux-study)
   * [Enable root login in linux](#enable-root-login)
   * [Enable root login via ssh](#enable-root-login-via-ssh)
+  * [SSH tunnelling and Port Forwarding](#ssh-tunnel)
+    * [Some useful sites for more information](#ssh-tunnel-sites)
   * [vimdiff shortcuts](#vimdiff-shortcuts)
   * [Resource rc Files]()
     * [screenrc](https://github.com/ashfaqraj/easy-dc/blob/master/screenrc)
@@ -118,6 +120,43 @@ auth required pam_succeed_if.so user !=root quiet_success
 Steps:
 1. apt install ssh
 2. Add line ```PermitRootLogin yes``` in file /etc/ssh/sshd_config
+
+### <a name='ssh-tunnel'>SSH tunnelling and Port Forwarding</a>
+#### Concept:
+There are 2 types of port forwarding:
+#### Local Forwarding
+Local forwarding is used to forward a port from the client machine to the server machine.</br>
+Typical uses for local port forwarding is creating tunnel sessions to remote server via jump servers</br></br>
+Use below command from your local command prompt</br>
+After successfull command execution</br>
+You can send request from local browser to remote server machine which is listening on port 80</br>
+Example: open browser and type: ```localhost:12345```
+```
+ssh -A -t jumphostuser@10.10.10.10 -L 12345:20.20.20.20:80 ssh serveruser@20.20.20.20
+```
+Options Explained:</br>
+```
+-t - to connect multiple ssh command in one line
+-L - port information which need to be forwarded
+10.10.10.10 - jump server IP
+20.20.20.20 - remote server IP (actual server)
+12345 - port from local windows/linux machine/laptop
+80 - remote server port
+```
+Steps executed here:</br>
+1. ```ssh -A -t jumphostuser@10.10.10.10 -L 12345:20.20.20.20:80```</br>
+Connect to jump host server, and forward the local laptop port 12345 from jumphost server to actual server 20.20.20.20 on port 80</br>
+```12345:20.20.20.20:80``` or ```127.0.0.1:12345:20.20.20.20:80``` - ```<local socket>:<remote socket>```</br>
+2. ```ssh serveruser@20.20.20.20```</br>
+Connect to remote server to create the tunnel</br>
+
+#### Remote Forwarding
+
+#### <a name='ssh-tunnel-sites'>Some useful sites for more information</a>
+1. https://www.ssh.com/ssh/tunneling/example
+2. https://www.tecmint.com/access-linux-server-using-a-jump-host/
+3. https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/
+4. http://blog.remibergsma.com/2013/05/28/creating-a-multi-hop-ssh-tunnel-by-chaining-ssh-commands-and-using-a-jump-host/
 
 ### <a name='vimdiff-shortcuts'>vimdiff shortcuts</a>
 ```
