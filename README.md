@@ -91,13 +91,9 @@ docker-compose version 1.17.1, build unknown
 	3. pip.exe install notebook
 ```
 ### <a name='jupyter-notebook-autocomplete'>Autocomplete for jupyter notebook</a>
-```
-to get autocomplete
-		pip3 install jupyter-tabnine
-		jupyter nbextension install --py jupyter_tabnine
-		jupyter nbextension enable --py jupyter_tabnine
-		jupyter serverextension enable --py jupyter_tabnine
-```
+Execute this line on top of every notebook</br>
+To do auto completion processing faster on TAB press
+```%config Completer.use_jedi = False```
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: Linux study material start here)
