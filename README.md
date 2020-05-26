@@ -17,6 +17,7 @@ Easy Docker Study Documentation.
   * [Create image from container](#create-image-from-container)
   * [Remove docker container](#remove-docker-container)
   * [Remove docker images](#remove-docker-images)
+  * [Copy file to/from host machine to/from docker container](#docker-copy)
 * [Install jupyter notebook](#install-jupyter-notebook)
   * [Install on Windows](#install-jupyter-notebook-windows)
   * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
@@ -144,6 +145,12 @@ Get image ID from
 ```docker images -a```</br>
 Remove Image using command
 ```docker rmi <image-id>```
+
+### <a name='docker-copy'>Copy file to/from host machine to/from docker container</a>
+Host to container
+```docker cp /home/ashfaqr/file.txt ubuntu18_c:/file.txt```
+Container to host
+```docker cp ubuntu18_c:/file.txt /home/ashfaqr/file.txt```
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: jupyter notebook installation steps starts here)
