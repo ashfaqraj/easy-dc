@@ -9,6 +9,14 @@ Easy Docker Study Documentation.
   * [Install docker-compose official link](https://docs.docker.com/compose/install/)
   * [After installation check docker version](#install-version)
   * [After installation check docker-compose version](#dc-install-version)
+* [Docker commands](#docker-commands)
+  * [Create docker file for ever running ubuntu container](#create-dockerfile)
+  * [Create docker image from dockerfile](#create-image-from-dockerfile)
+  * [create container from image](#create-docker-container)
+  * [Run stopped docker container](#run-container)
+  * [Create image from container](#create-image-from-container)
+  * [Remove docker container](#remove-docker-container)
+  * [Remove docker images](#remove-docker-images)
 * [Install jupyter notebook](#install-jupyter-notebook)
   * [Install on Windows](#install-jupyter-notebook-windows)
   * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
@@ -79,6 +87,63 @@ If the docker-compose installation is successfull. Run the command to check the 
 root@machine: ~/ # docker-compose -v
 docker-compose version 1.17.1, build unknown
 ```
+
+[//]: # (comment: ###########################################################)
+[//]: # (comment: docker commands starts here)
+[//]: # (comment: ###########################################################)
+## <a name='docker-commands'>Docker commands</a>
+### <a name='create-dockerfile'>Create Dockerfile for ever running ubuntu container</a>
+Create a file ```Dockerfile``` in a directory ```/home/ashfaqr/docker/``` with content</br>
+```vim /home/ashfaqr/docker/Dockerfile```
+```
+FROM ubuntu:18.04
+
+# other commands
+RUN apt-get install -y vim
+EXPOSE 5000
+
+CMD ["tail", "-f", "/dev/null"]
+```
+
+### <a name='create-image-from-dockerfile'>Create docker image from dockerfile</a>
+Will create image by the name ```ubuntu18_i_v1.0```</br>
+using Dockerfile from above [step](#create-dockerfile)</br>
+```
+cd /home/ashfaqr/docker/
+docker build -t ubuntu18_i_v1.0 .
+```
+Note: don't miss the dot (.) at the end of command
+
+### <a name='create-docker-container'>create container from image</a>
+Will create container by the name ```ubuntu18_c``` using image ```ubuntu18_i_v1.0```</br>
+-p : is bind host port(8888) to exposed port(5000) inside container</br>
+```
+docker run -d -it --name ubuntu18_c -p 8888:5000 ubuntu18_i_v1.0
+```
+
+### <a name='run-container'>Run stopped docker container</a>
+Get container ID from
+```docker ps -a``` OR ```docker container ls -a```</br>
+Start/Run container using
+```docker container start <container-id>```
+
+### <a name='create-image-from-container'>Create image from container</a>
+Get container ID from
+```docker ps -a``` OR ```docker container ls -a```</br>
+Create image using container id as
+```docker commit $CONTAINER_ID ubuntu18_i_v2.0```
+
+### <a name='remove-docker-container'>Remove docker container</a>
+Get container ID from
+```docker ps -a``` OR ```docker container ls -a```</br>
+Remove docker container via
+```docker container rm <container-id>```
+
+### <a name='remove-docker-images'>Remove docker images</a>
+Get image ID from
+```docker images -a```</br>
+Remove Image using command
+```docker rmi <image-id>```
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: jupyter notebook installation steps starts here)
