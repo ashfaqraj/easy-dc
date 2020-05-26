@@ -147,9 +147,9 @@ Remove Image using command
 ```docker rmi <image-id>```
 
 ### <a name='docker-copy'>Copy file to/from host machine to/from docker container</a>
-Host to container
-```docker cp /home/ashfaqr/file.txt ubuntu18_c:/file.txt```
-Container to host
+Host to container</br>
+```docker cp /home/ashfaqr/file.txt ubuntu18_c:/file.txt```</br>
+Container to host</br>
 ```docker cp ubuntu18_c:/file.txt /home/ashfaqr/file.txt```
 
 [//]: # (comment: ###########################################################)
