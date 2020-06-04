@@ -18,6 +18,7 @@ Easy Docker Study Documentation.
   * [Remove docker container](#remove-docker-container)
   * [Remove docker images](#remove-docker-images)
   * [Copy file to/from host machine to/from docker container](#docker-copy)
+  * [ssh to docker container running on server, using putty](#ssh-to-docker-container)
 * [Install jupyter notebook](#install-jupyter-notebook)
   * [Install on Windows](#install-jupyter-notebook-windows)
   * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
@@ -153,6 +154,15 @@ Host to container</br>
 ```docker cp /home/ashfaqr/file.txt ubuntu18_c:/file.txt```</br>
 Container to host</br>
 ```docker cp ubuntu18_c:/file.txt /home/ashfaqr/file.txt```
+
+### <a name='ssh-to-docker-container'>ssh to docker container running on server, using putty</a>
+Steps:
+1. Create image and container using above [steps](#create-docker-container), (say EXPOSE port is 5000)
+2. Login to docker as ```docker exec -it ubuntu18_c bash```
+3. Install ssh ```apt-get install -y ssh```
+4. ```passwd root``` --> give some password
+5. Add line in file ```vim /etc/ssh/sshd_config``` as ```PermitRootLogin yes``` to permit root login via ssh
+6. Add line in file ```vim /etc/ssh/sshd_config``` as ```Port 5000``` to allow login to exposed port 5000
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: jupyter notebook installation steps starts here)
