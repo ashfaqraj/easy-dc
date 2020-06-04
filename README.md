@@ -112,6 +112,8 @@ using Dockerfile from above [step](#create-dockerfile)</br>
 ```
 cd /home/ashfaqr/docker/
 docker build -t ubuntu18_i_v1.0 .
+OR
+docker build -t ubuntu18_i_v1.0 . -f Dockerfile_extended
 ```
 Note: don't miss the dot (.) at the end of command
 
