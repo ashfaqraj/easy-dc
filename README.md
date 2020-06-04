@@ -163,6 +163,8 @@ Steps:
 4. ```passwd root``` --> give some password
 5. Add line in file ```vim /etc/ssh/sshd_config``` as ```PermitRootLogin yes``` to permit root login via ssh
 6. Add line in file ```vim /etc/ssh/sshd_config``` as ```Port 5000``` to allow login to exposed port 5000
+7. ```servive ssh restart```
+8. Login to docker container via putty as ```ssh root@<server-ip> -p 5000```
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: jupyter notebook installation steps starts here)
