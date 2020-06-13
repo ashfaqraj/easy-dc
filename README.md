@@ -19,6 +19,7 @@ Easy Docker Study Documentation.
   * [Remove docker images](#remove-docker-images)
   * [Copy file to/from host machine to/from docker container](#docker-copy)
   * [ssh to docker container running on server, using putty](#ssh-to-docker-container)
+  * [Create docker container inside container](#container-inside-container)
 * [Install jupyter notebook](#install-jupyter-notebook)
   * [Install on Windows](#install-jupyter-notebook-windows)
   * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
@@ -165,6 +166,26 @@ Steps:
 6. Add line in file ```vim /etc/ssh/sshd_config``` as ```Port 5000``` to allow login to exposed port 5000
 7. ```servive ssh restart```
 8. Login to docker container via putty as ```ssh root@<server-ip> -p 5000```
+
+### <a name='container-inside-container'>Create docker container inside container</a>
+Steps:
+1. create image on host machine from [step](#create-image-from-dockerfile) say 
+2. create container on host machine using the image ubuntu18_i_v1.0
+```
+docker run -it -d --name ubuntu -e PUID=0 -e PGID=0 -v /var/lib/docker --privileged=true -p 5000:5000 ubuntu18_i_v1.0
+```
+3. login to container: ```docker exec -it ubuntu bash```
+4. Start dockerd (docker daemon) using command
+```dockerd --host=unix:///var/run/docker.sock &```
+5. create container inside container: Eg.
+```docker run -it -d --name=c_inside_c ubuntu:latest```
+
+NOTE:</br>
+There is an official image also for docker inisde docker. Named as "dind"
+```docker pull docker:dind```</br>
+More study site for reference:
+1. [Docker dind](https://hub.docker.com/_/docker)
+2. [Useful site for dind study](https://itnext.io/docker-in-docker-521958d34efd)
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: jupyter notebook installation steps starts here)
