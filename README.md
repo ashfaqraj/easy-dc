@@ -17,6 +17,7 @@ Easy Docker Study Documentation.
   * [Create image from container](#create-image-from-container)
   * [Remove docker container](#remove-docker-container)
   * [Remove docker images](#remove-docker-images)
+  * [Remove docker volumes](#remove-docker-volumes)
   * [Copy file to/from host machine to/from docker container](#docker-copy)
   * [ssh to docker container running on server, using putty](#ssh-to-docker-container)
   * [Create docker container inside container](#container-inside-container)
@@ -149,6 +150,11 @@ Get image ID from
 ```docker images -a```</br>
 Remove Image using command
 ```docker rmi <image-id>```
+
+### <a name='remove-docker-volumes'>Remove docker volumes</a>
+Get dangling volumes ```docker volume ls -f dangling=true```</br>
+Remove all local unused volumes by any 1 container ```docker volume prune```</br>
+Remove one volume at time ```docker volume rm volume_name```</br>
 
 ### <a name='docker-copy'>Copy file to/from host machine to/from docker container</a>
 Host to container</br>
