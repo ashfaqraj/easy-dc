@@ -4,6 +4,7 @@ Easy Docker Study Documentation.
 ## Table of Content
 * [Installation - Docker/Docker-compose](#installation)
   * [Install docker on ubuntu using apt](#install-ubuntu)
+  * [Install latest CE docker using get.docker.com script](#install-via-docker-script)
   * [Install docker-compose on ubuntu using apt](#install-ubuntu-dc)
   * [Install docker official link](https://docs.docker.com/engine/install/)
   * [Install docker-compose official link](https://docs.docker.com/compose/install/)
@@ -74,6 +75,12 @@ Easy Docker Study Documentation.
 ```
 root@machine: ~/ # apt install docker.io
 ```
+### <a name='install-via-docker-script'>Install latest CE docker using get.docker.com script</a>
+This script for quick & easy install via steps:
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+```	
 ### <a name='install-ubuntu-dc'>Install docker-compose on ubuntu using apt</a>
 Installing docker-ompose from the official ubuntu repository.
 ```
