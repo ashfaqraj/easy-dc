@@ -28,6 +28,7 @@ Easy Docker Study Documentation.
 * [Linux Study Material](#linux-study)
   * [Enable root login in linux](#enable-root-login)
   * [Enable root login via ssh](#enable-root-login-via-ssh)
+  * [Enable samba on linux - mount directory on windows](#enable-smaba-on-linux)
   * [SSH tunnelling and Port Forwarding](#ssh-tunnel)
     * [Some useful sites for more information](#ssh-tunnel-sites)
   * [vimdiff shortcuts](#vimdiff-shortcuts)
@@ -242,6 +243,32 @@ auth required pam_succeed_if.so user !=root quiet_success
 Steps:
 1. apt install ssh
 2. Add line ```PermitRootLogin yes``` in file /etc/ssh/sshd_config
+
+### <a name='enable-smaba-on-linux'>Enable samba on linux - mount directory on windows</a>
+Note: Samba installation process - work only for non root user
+
+1. Ensure samba is installed. ```samba -V``` ```apt install samba```
+
+2. Set samba password for the user ```smbpasswd -a <user_name>```
+
+3. Edit file ```/etc/samba/smb.conf``` and add/do following changes at the end of file
+```
+[<share_name>]  # used to access this shared directory
+	path = #absolute path to the directory being shared
+	valid users = <user_name> # users allowed to access this share
+	read only = no 
+	browsable = yes
+```
+
+4. Start the samba service ```service smbd restart```
+
+5. Once Samba has restarted, use this command to check your smb.conf for any syntax errors ```testparm```
+
+6. To access network share from windows. Steps:
+	1. Goto ```Map network drive``` option
+	2. Under the folder path, enter ```\\<ip_address_or_host_name>\<share_name>```
+	3. Check ```Connect using different credentials``` checkbox
+	4. Now use the linux user with the special password set for samba (To avoid confusion keep the samba password same as unix password)
 
 ### <a name='ssh-tunnel'>SSH tunnelling and Port Forwarding</a>
 #### Concept:
