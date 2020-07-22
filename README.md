@@ -211,9 +211,15 @@ More study site for reference:
 	3. pip.exe install notebook
 ```
 ### <a name='jupyter-notebook-autocomplete'>Autocomplete for jupyter notebook</a>
-Execute this line on top of every notebook</br>
-To do auto completion processing faster on TAB press
-```%config Completer.use_jedi = False```
+Steps:
+```
+1. pip install jupyter_contrib_nbextensions
+2. jupyter contrib nbextension install --user
+3. Restart notebook
+4. Click on Nbextensions tab on jupyter notebook home page
+
+5. for autocompletion enable hinterland
+```
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: Linux study material start here)
