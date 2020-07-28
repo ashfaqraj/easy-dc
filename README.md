@@ -315,6 +315,7 @@ do          - diff obtain
 dp          - diff put
 zo          - open folded text
 zc          - close folded text
+zr          - open all folding(recursive)
 :diffupdate - re-scan the files for differences
 ```
 
