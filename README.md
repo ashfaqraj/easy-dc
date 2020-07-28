@@ -315,8 +315,13 @@ do          - diff obtain
 dp          - diff put
 zo          - open folded text
 zc          - close folded text
-zr          - open all folding(recursive)
+zr          - open all folds(recursive)
+zm          - close all folds(recursive)
+zi          - toggles folding on or off
+zk / zj     - move to previous / next fold
 :diffupdate - re-scan the files for differences
+
+Other options can be find on this link https://gist.github.com/azadkuh/5d223d46a8c269dadfe4
 ```
 
 [//]: # (comment: ###########################################################)
