@@ -37,6 +37,8 @@ Easy Docker Study Documentation.
     * [vimrc](https://github.com/ashfaqraj/easy-dc/blob/master/vimrc)
 * [Putty Study Material](#putty-study)
   * [Connect Local Windows VirtualBox VM via Putty](#VB-VM-via-putty-windows)
+* [github study](#github-study)
+  * [github readme page with color](#readme-page-color)
 * [My aliases - bash](#mybashalias)
   * [dc - for docker-compose](#dc)
   * [names - formatted docker ps output for large list of services](#names)
@@ -341,6 +343,19 @@ Steps:
     * add line PermitRootLogin yes 
     * in file /etc/ssh/sshd_config
 
+[//]: # (comment: ###########################################################)
+[//]: # (comment: github study aterial
+[//]: # (comment: ###########################################################)
+## <a name='github-study'>github Study</a>
+### <a name='readme-page-color'>github readme page with color</a>
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```  
+  
 [//]: # (comment: ###########################################################)
 [//]: # (comment: My bash aliases starts here)
 [//]: # (comment: ###########################################################)
