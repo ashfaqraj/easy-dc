@@ -344,7 +344,7 @@ Steps:
     * in file /etc/ssh/sshd_config
 
 [//]: # (comment: ###########################################################)
-[//]: # (comment: github study aterial
+[//]: # (comment: github study aterial)
 [//]: # (comment: ###########################################################)
 ## <a name='github-study'>github Study</a>
 ### <a name='readme-page-color'>github readme page with color</a>
