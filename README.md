@@ -249,9 +249,16 @@ auth required pam_succeed_if.so user !=root quiet_success
 ```
 
 ### <a name='enable-root-login-via-ssh'>Enable root login via ssh</a>
-Steps:
+Steps: To login to server directly from localhost terminal
 1. apt install ssh
 2. Add line ```PermitRootLogin yes``` in file /etc/ssh/sshd_config
+3. expose one port in sshd config, default 22 (already present) in file /etc/ssh/sshd_config
+3. add line in /etc/hosts.allow if error comes as "ssh_exchange_identification: read: Connection reset by peer"
+3. Cmd ```service ssh restart```
+4. Cmd ```passwd root```
+5. login as: ```ssh root@<server-ip> -p <new-port>```
+6. enable root passwd ```passwd root```
+Note: disable root passwd ```passwd -d root```
 
 ### <a name='enable-smaba-on-linux'>Enable samba on linux - mount directory on windows</a>
 Note: Samba installation process - work only for non root user
