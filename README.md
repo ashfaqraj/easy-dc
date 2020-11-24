@@ -16,6 +16,7 @@ Easy Docker Study Documentation.
   * [create container from image](#create-docker-container)
   * [Run stopped docker container](#run-container)
   * [Create image from container](#create-image-from-container)
+  * [Docker load and save image](#docker-load-save-image)
   * [Remove docker container](#remove-docker-container)
   * [Remove docker images](#remove-docker-images)
   * [Remove docker volumes](#remove-docker-volumes)
@@ -148,6 +149,12 @@ Get container ID from
 ```docker ps -a``` OR ```docker container ls -a```</br>
 Create image using container id as
 ```docker commit $CONTAINER_ID ubuntu18_i_v2.0```
+
+### <a name='docker-load-save-image'>Docker load and save image</a>
+Save image as tar file
+```docker save -o /new/tar/path/myimage.tar image_name:tag```</br>
+Load image from tar file 
+```docker load -i /path/to/myimage.tar```</br>
 
 ### <a name='remove-docker-container'>Remove docker container</a>
 Get container ID from
