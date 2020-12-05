@@ -12,6 +12,7 @@ Easy Docker Study Documentation.
   * [After installation check docker-compose version](#dc-install-version)
 * [Docker commands](#docker-commands)
   * [Create docker file for ever running ubuntu container](#create-dockerfile)
+    * [ENV and ARG variable in dockerfile](#env-arg-variables)
   * [Create docker image from dockerfile](#create-image-from-dockerfile)
   * [create container from image](#create-docker-container)
   * [Run stopped docker container](#run-container)
@@ -119,6 +120,9 @@ EXPOSE 5000
 
 CMD ["tail", "-f", "/dev/null"]
 ```
+
+#### <a name='env-arg-variables'>ENV and ARG variable in dockerfile</a>
+![Study ENV and ARG variables in dockerfile](https://github.com/ashfaqraj/easy-dc/blob/master/Study%20Diagrams/ENV_ARG_variable.png)
 
 ### <a name='create-image-from-dockerfile'>Create docker image from dockerfile</a>
 Will create image by the name ```ubuntu18_i_v1.0```</br>
