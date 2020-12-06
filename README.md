@@ -201,7 +201,12 @@ Steps:
 ```
 docker run -it -d --name ubuntu -e PUID=0 -e PGID=0 -v /var/lib/docker --privileged=true -p 5000:5000 ubuntu18_i_v1.0
 ```
+ or
+```
+docker run -it -d --name ubuntu -e PUID=0 -e PGID=0 -v /var/lib/docker --privileged=true ashfaqraj/miniubuntu
+```
 3. login to container: ```docker exec -it ubuntu bash```
+4. Install docker daemon inside container: ```apt install -y docker.io```
 4. Start dockerd (docker daemon) using command
 ```dockerd --host=unix:///var/run/docker.sock &```
 5. create container inside container: Eg.
