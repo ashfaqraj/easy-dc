@@ -24,6 +24,7 @@ Easy Docker Study Documentation.
   * [Copy file to/from host machine to/from docker container](#docker-copy)
   * [ssh to docker container running on server, using putty](#ssh-to-docker-container)
   * [Create docker container inside container](#container-inside-container)
+  * [Find parent image(id) of a child image](#parent-of-child-image)
 * [Install jupyter notebook](#install-jupyter-notebook)
   * [Install on Windows](#install-jupyter-notebook-windows)
   * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
@@ -218,6 +219,12 @@ There is an official image also for docker inisde docker. Named as "dind"
 More study site for reference:
 1. [Docker dind](https://hub.docker.com/_/docker)
 2. [Useful site for dind study](https://itnext.io/docker-in-docker-521958d34efd)
+
+### <a name='parent-of-child-image'>Find parent image(id) of a child image</a>
+Case 1: All images</br>
+```docker inspect --format='{{.Id}} {{.Parent}}' \ $(docker images --quiet)```</br>
+Case 2: Specific image</br>
+```docker inspect --format='{{.Id}} {{.Parent}}' <image-id>```
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: jupyter notebook installation steps starts here)
