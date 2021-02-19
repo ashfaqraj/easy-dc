@@ -25,6 +25,7 @@ Easy Docker Study Documentation.
   * [ssh to docker container running on server, using putty](#ssh-to-docker-container)
   * [Create docker container inside container](#container-inside-container)
   * [Find parent image(id) of a child image](#parent-of-child-image)
+  * [ssh between 2 docker container](#ssh-between-container)
 * [Install jupyter notebook](#install-jupyter-notebook)
   * [Install on Windows](#install-jupyter-notebook-windows)
   * [Autocomplete for jupyter notebook](#jupyter-notebook-autocomplete)
@@ -225,6 +226,17 @@ Case 1: All images</br>
 ```docker inspect --format='{{.Id}} {{.Parent}}' \ $(docker images --quiet)```</br>
 Case 2: Specific image</br>
 ```docker inspect --format='{{.Id}} {{.Parent}}' <image-id>```
+
+### <a name='ssh-between-container'>ssh between 2 docker container</a>
+Add these lines in docker file while creating image</br>
+```
+RUN apt-get install openssh-client openssh-server
+CMD ["service", "ssh", "start"]
+```
+
+OR after bringing up container start sshd service using ```service ssh start```</br>
+NOTE: use user only whose passwd is enabled.
+
 
 [//]: # (comment: ###########################################################)
 [//]: # (comment: jupyter notebook installation steps starts here)
