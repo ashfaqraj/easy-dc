@@ -279,7 +279,7 @@ auth required pam_succeed_if.so user !=root quiet_success
 ### <a name='enable-root-login-via-ssh'>Enable root login via ssh</a>
 Steps: To login to server directly from localhost terminal
 1. apt install ssh
-2. Add line ```PermitRootLogin yes``` in file /etc/ssh/sshd_config
+2. Add line ```PermitRootLogin yes   and    PasswordAuthentication yes``` in file /etc/ssh/sshd_config
 3. expose one port in sshd config, default 22 (already present) in file /etc/ssh/sshd_config
 3. add line in /etc/hosts.allow if error comes as "ssh_exchange_identification: read: Connection reset by peer"
 3. Cmd ```service ssh restart```
