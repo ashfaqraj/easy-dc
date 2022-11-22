@@ -159,6 +159,8 @@ Create image using container id as
 ### <a name='docker-load-save-image'>Docker load and save image</a>
 Save image as tar file
 ```docker save -o /new/tar/path/myimage.tar image_name:tag```</br>
+Save image as tar file with compression
+```docker save image_name:tag | xz > /new/tar/path/myimage.tar```</br>
 Load image from tar file 
 ```docker load -i /path/to/myimage.tar```</br>
 
